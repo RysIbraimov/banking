@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{client.name}} - {{client.birth_year}} - {{client.citizenship}} - {{client.work_place}}
+<hr>
+    {% for a in clienst.accaunt_set.all %}
+        {% for cr in a.credit_set.all %}
+            {{cr.sum}} - {{cr.date}}
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>
